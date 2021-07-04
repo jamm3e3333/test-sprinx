@@ -1,3 +1,5 @@
+//1)
+
 console.log('A',+'2' + 3);
 console.log('B','2' + 3);
 console.log('C',!![]);
@@ -9,7 +11,10 @@ console.log('H',false && 5);
 console.log('I',null === undefined);
 console.log('J',NaN === NaN);
 
+
 const arr = [1,2,4,2,3,4,1,22];
+
+//2)
 
 const checkSum = (ar) => {
     let sum = 0;
@@ -24,20 +29,39 @@ const checkSum = (ar) => {
 
 console.log(checkSum(arr));
 
+//4) funkce se musi volat unvitr asynchronni funkce
 const waitMinute = (min) => {
-    return new Promise((res, rej) => {
+    return new Promise((resolve, reject) => {
         if(typeof min !== "number") {
-            rej(console.log("The input should be number."))
+            return reject("The input should be number.");
         }
         setTimeout( () => {
-            res(console.log(`This log will execute after ${min} mings`));
-        }, min);
+            resolve(console.log(`This log will execute after ${min} minutes`));
+        }, min*60000);
     })
 }
-try{
-    await waitMinute(3000).Promise
 
+const run_waitMinute = async (min) => {
+    try{
+        await waitMinute(min);
+    }
+    catch(e) {
+        console.log(e);
+    }
 }
-catch(e){
-    console.log(e)
-}
+
+//5)
+console.log('5---\n')
+const o1 = { x: 1, y: 2, z: 3 };
+const o2 = { x: 11, ...o1, z: 33 };
+console.log('x=', o2.x);
+console.log('y=', o2.y);
+console.log('z=', o2.z);
+console.log(o2)
+console.log('---')
+
+
+run_waitMinute(0.25);
+//7)
+const arr2 = [1, -2, -0, 2, 0, -1];
+console.log(arr2.sort());

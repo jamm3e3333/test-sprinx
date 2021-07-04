@@ -1,0 +1,40 @@
+a {
+    text-decoration: none;
+    color: red;
+    text-transform: uppercase;
+}
+
+a::before {
+    content: ">";
+}
+
+a::after {
+    content: "<";
+}
+
+div.header {
+    padding: 20px;
+    border: 2px solid black;
+}
+
+div.header div:first-child {
+    // position:absolute;
+    background: green;
+    // left: 20px;
+    float: left;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+div.header div:last-child {
+    // position:absolute;
+    background: red;
+    // right: 20px;
+    float: right;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
