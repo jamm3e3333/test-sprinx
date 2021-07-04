@@ -60,6 +60,25 @@ console.log('z=', o2.z);
 console.log(o2)
 console.log('---')
 
+//6)
+const arr1 = [[12, 5, -3], [44, 55], [-1]];
+
+const createObject = (arr) => {
+    const ageObj = [];
+    console.log('calling the arr method.')
+    arr.map((ar) => {
+        const newArr = ar.filter((a) => {
+            return a > 0;
+        })
+        .map((a) => {
+            arr.concat({age: a});
+        })
+        console.log('arr',newArr);
+    });
+}
+
+createObject(arr1);
+
 
 run_waitMinute(0.25);
 //7)
