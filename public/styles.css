@@ -13,14 +13,11 @@ a::after {
 }
 
 div.header {
-    padding: 20px;
+    padding: 20px 0;
     border: 2px solid black;
 }
 
 div.header div:first-child {
-    // position:absolute;
-    background: green;
-    // left: 20px;
     float: left;
     margin: 0;
     top: 50%;
@@ -29,9 +26,6 @@ div.header div:first-child {
 }
 
 div.header div:last-child {
-    // position:absolute;
-    background: red;
-    // right: 20px;
     float: right;
     top: 50%;
     -ms-transform: translateY(-50%);
