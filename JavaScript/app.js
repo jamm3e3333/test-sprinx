@@ -6,7 +6,7 @@ const arr = [1,2,4,2,3,4,1,22];
 const checkSum = (ar) => {
     let sum = 0;
     if(!(ar instanceof Array)) {
-        throw new Error("The input must be an array.");
+        throw new Error("Vstup musi byt pole.");
     }
     ar.forEach((a) => {
         sum += a**2;
@@ -20,7 +20,7 @@ console.log('Priklad 2: ',checkSum(arr));
 const waitMinute = (min) => {
     return new Promise((resolve, reject) => {
         if(typeof min !== "number") {
-            return reject("The input should be number.");
+            return reject("Vstup musi byt cislo.");
         }
         setTimeout( () => {
             resolve(console.log(`Priklad 4: Tento vypis se zobrazi za ${min} minuty`));
