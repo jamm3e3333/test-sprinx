@@ -4,9 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js -e js",
-    "start": "node app.js"
+    "dev-js": "nodemon ./JavaScript/app.js -e js",
+    "react-1": "concurrently --kill-others-on-fail \"babel ./React/1/src/app.js --out-file=React/1/public/scripts/app.js --presets=env,react --watch\" \"live-server ./React/1/public\" ",
+    "react-2": "concurrently --kill-others-on-fail \"babel ./React/2/src/app.js --out-file=React/2/public/scripts/app.js --presets=env,react --watch\" \"live-server ./React/2/public\" ",
+    "start": "node app.js",
+    "html-css": "live-server html_css/public"
   },
   "author": "Jakub Vala",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "nodemon": "^2.0.9"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "concurrently": "^6.2.0",
+    "live-server": "^1.2.1"
+  }
 }
