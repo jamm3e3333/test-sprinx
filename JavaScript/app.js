@@ -14,7 +14,7 @@ const checkSum = (ar) => {
     return sum;
 }
 
-console.log(checkSum(arr));
+console.log('Priklad 2: ',checkSum(arr));
 
 //4) 
 const waitMinute = (min) => {
@@ -23,14 +23,14 @@ const waitMinute = (min) => {
             return reject("The input should be number.");
         }
         setTimeout( () => {
-            resolve(console.log(`This log will execute after ${min} minutes`));
+            resolve(console.log(`Priklad 4: Tento vypis se zobrazi za ${min} minuty`));
         }, min*60000);
     })
 }
 
 const run_waitMinute = async (min) => {
     try{
-        console.log('Prvni vypis')
+        console.log('Priklad 4: Prvni vypis')
         await waitMinute(min);
     }
     catch(e) {
@@ -56,4 +56,4 @@ const createObject = (arr) => {
 }
 
 const ageArr = createObject(arr1);
-console.log(ageArr);
+console.log('Priklad 6: ',ageArr);
